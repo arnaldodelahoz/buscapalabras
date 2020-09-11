@@ -12,9 +12,11 @@ class WordController extends Controller
         $num=is_int(intval($num))?$num:4;
         $exp = "^[" . strtolower(normalizer_normalize($letters)) . "]*$";
         $query = Word::where('word', 'regexp', $exp)->whereRaw('LENGTH(word) ='.$num);
+
         if($startWith && $startWith !== '--'){
             $query->where('word','like', $startWith.'%');
         }
-            return $query->paginate($limit);
+        
+        return $query->paginate($limit);
     }
 }
