@@ -2,11 +2,12 @@
 
 ## Instalacion
 
-1- Ejecutar composer install.
-2- ejecutar php artisan migrate
-3- descomprimir archivo dump-eftest
-4- importar db.
-5- Ejecutar php artisan serve
+- Ejecutar composer install.
+- Configurar accesos de Bases de datos en archivo .env
+- Ejecutar php artisan migrate
+- Descomprimir archivo dump-eftest
+- Importar bases de datos contenida en el archivo descomprimido.
+- Ejecutar php artisan serve
 
 ## License
 
